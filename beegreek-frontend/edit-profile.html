@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <title>Επεξεργασία Προφίλ – BeeGreek</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    body {
+      background: #faf7ef;
+      font-family: "Inter", Arial, sans-serif;
+    }
+
+    .edit-container {
+      max-width: 600px;
+      margin: 60px auto;
+      background: white;
+      padding: 35px;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      border: 1px solid #f0e6c7;
+    }
+
+    h1 {
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    h2 {
+      margin-top: 35px;
+      font-size: 22px;
+      color: #333;
+      font-weight: 700;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 5px;
+    }
+
+    label {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 6px;
+      color: #555;
+      font-weight: 600;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      margin-bottom: 18px;
+      font-size: 15px;
+      outline: none;
+      transition: border 0.2s ease;
+    }
+
+    input:focus, select:focus {
+      border-color: #ffbb33;
+    }
+
+    .btn {
+      padding: 12px 20px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.2s ease;
+      display: inline-block;
+      margin-right: 8px;
+      margin-top: 6px;
+    }
+
+    .btn-primary {
+      background: #000;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #333;
+    }
+
+    .btn-secondary {
+      background: #ffe8b3;
+      color: #7a5d00;
+    }
+
+    .btn-secondary:hover {
+      background: #ffd67a;
+    }
+
+    .msg {
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      font-size: 14px;
+      display: none;
+    }
+
+    #update-success {
+      background: #d9f9d9;
+      color: #0d7a0d;
+    }
+
+    #update-error {
+      background: #ffd6d6;
+      color: #8e0000;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 25px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+
+    <div class="logo">
+      <img src="logo.svg" alt="BeeGreek logo" class="logo-img">
+    </div>
+
+    <nav class="main-nav">
+      <a href="index.html">Αρχική</a>
+
+      <a href="profile.html" id="nav-avatar-container" style="display:none;">
+        <img id="nav-avatar" src="images/avatars/default-avatar.png" alt="avatar">
+      </a>
+
+      <a href="chat.html" id="nav-chat" style="display:none;">Chat</a>
+      <a href="weather.html" id="nav-weather" style="display:none;">Καιρός</a>
+
+      <a href="login.html" id="nav-login">Είσοδος</a>
+      <a href="register.html" id="nav-register">Εγγραφή</a>
+      <a href="#" id="nav-logout" style="display:none;">Έξοδος</a>
+    </nav>
+
+  </div>
+</header>
+
+<div class="edit-container">
+
+  <h1>Επεξεργασία Προφίλ</h1>
+
+  <div id="update-success" class="msg"></div>
+  <div id="update-error" class="msg"></div>
+
+  <!-- Ονοματεπώνυμο -->
+  <label>Νέο Ονοματεπώνυμο</label>
+  <input type="text" id="edit-name" placeholder="Πληκτρολόγησε νέο όνομα">
+  <button id="save-name" class="btn btn-primary">Αποθήκευση Ονόματος</button>
+
+  <!-- Email -->
+  <h2>Αλλαγή Email</h2>
+
+  <label>Νέο Email</label>
+  <input type="email" id="edit-email" placeholder="Πληκτρολόγησε νέο email">
+  <button id="change-email-btn" class="btn btn-secondary">Αλλαγή Email</button>
+
+  <!-- Κωδικός -->
+  <h2>Αλλαγή Κωδικού</h2>
+
+  <label>Τρέχων κωδικός</label>
+  <input type="password" id="old-password" placeholder="••••••••">
+
+  <label>Νέος κωδικός</label>
+  <input type="password" id="new-password" placeholder="Νέος κωδικός">
+  <button id="save-password" class="btn btn-primary">Αλλαγή Κωδικού</button>
+
+  <!-- Στοιχεία Μελισσοκόμου -->
+  <h2>Στοιχεία Μελισσοκόμου</h2>
+
+  <label for="bk-type">Τύπος μελισσοκόμου</label>
+  <select id="bk-type">
+    <option value="">Επίλεξε...</option>
+    <option value="Ερασιτέχνης">Ερασιτέχνης</option>
+    <option value="Επαγγελματίας">Επαγγελματίας</option>
+    <option value="Νέος μελισσοκόμος">Νέος μελισσοκόμος</option>
+  </select>
+
+  <label for="bk-location">Περιοχή</label>
+  <input type="text" id="bk-location" placeholder="π.χ. Θεσσαλονίκη">
+
+  <label for="bk-hives">Αριθμός κυψελών</label>
+  <input type="number" id="bk-hives" min="0" placeholder="π.χ. 25">
+
+  <label for="bk-experience">Χρόνια εμπειρίας</label>
+  <input type="number" id="bk-experience" min="0" placeholder="π.χ. 3">
+
+  <button id="save-beeprofile-btn" class="btn btn-primary">
+    Αποθήκευση στοιχείων μελισσοκόμου
+  </button>
+
+  <a href="profile.html" class="back-link">← Πίσω στο Προφίλ</a>
+</div>
+
+<script type="module" src="script.js"></script>
+
+</body>
+</html>

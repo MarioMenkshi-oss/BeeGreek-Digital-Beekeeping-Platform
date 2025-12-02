@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <title>Το προφίλ μου - BeeGreek</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    header {
+      display: block !important;
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+
+    <div class="logo">
+      <img src="logo.svg" alt="BeeGreek logo" class="logo-img">
+    </div>
+
+    <nav class="main-nav">
+      <a href="index.html">Αρχική</a>
+
+      <a href="profile.html" id="nav-avatar-container" style="display:none;">
+        <img id="nav-avatar" src="images/avatars/default-avatar.png" alt="avatar">
+      </a>
+
+      <a href="chat.html" id="nav-chat" style="display:none;">Chat</a>
+      <a href="weather.html" id="nav-weather" style="display:none;">Καιρός</a>
+
+      <a href="login.html" id="nav-login">Είσοδος</a>
+      <a href="register.html" id="nav-register">Εγγραφή</a>
+      <a href="#" id="nav-logout" style="display:none;">Έξοδος</a>
+    </nav>
+
+  </div>
+</header>
+
+<main class="profile-page" id="profile-page">
+
+  <section class="profile-card">
+
+    <!-- Avatar -->
+    <div class="profile-avatar">
+      <img id="profile-avatar-img" src="images/avatars/default-avatar.png" alt="Avatar προφίλ">
+      <button type="button" class="btn secondary avatar-btn" id="change-avatar-btn">
+        Αλλαγή φωτογραφίας
+      </button>
+      <input type="file" id="avatar-file" accept="image/*" hidden>
+    </div>
+
+    <h1>Το προφίλ μου</h1>
+    <p class="profile-intro">Εδώ βλέπεις τα στοιχεία του λογαριασμού σου.</p>
+
+    <!-- Βασικά στοιχεία -->
+    <div class="profile-row">
+      <span class="profile-label">Ονοματεπώνυμο</span>
+      <span class="profile-value" id="profile-name">—</span>
+    </div>
+
+    <div class="profile-row">
+      <span class="profile-label">Email</span>
+      <span class="profile-value" id="profile-email">—</span>
+    </div>
+
+    <div class="profile-row">
+      <span class="profile-label">Κατάσταση Email</span>
+      <span class="profile-value" id="profile-verified">—</span>
+    </div>
+
+    <div class="profile-row">
+      <span class="profile-label">Μέλος από</span>
+      <span class="profile-value" id="profile-created">—</span>
+    </div>
+
+    <hr class="profile-divider">
+
+    <!-- Στοιχεία μελισσοκόμου -->
+    <h2 class="profile-subtitle">Στοιχεία μελισσοκόμου</h2>
+
+    <div class="profile-row">
+      <span class="profile-label">Τύπος μελισσοκόμου</span>
+      <span class="profile-value" id="bk-type-display">—</span>
+    </div>
+
+    <div class="profile-row">
+      <span class="profile-label">Περιοχή</span>
+      <span class="profile-value" id="bk-location-display">—</span>
+    </div>
+
+    <div class="profile-row">
+      <span class="profile-label">Αριθμός κυψελών</span>
+      <span class="profile-value" id="bk-hives-display">—</span>
+    </div>
+
+    <div class="profile-row">
+      <span class="profile-label">Χρόνια εμπειρίας</span>
+      <span class="profile-value" id="bk-experience-display">—</span>
+    </div>
+
+    <div class="profile-actions">
+      <a href="index.html" class="btn primary">Πίσω στην αρχική</a>
+      <button id="profile-logout" class="btn primary">Έξοδος</button>
+    </div>
+
+    <div class="edit-profile-center">
+      <a href="edit-profile.html" class="btn edit-btn">Επεξεργασία προφίλ</a>
+    </div>
+
+  </section>
+</main>
+
+<!-- Avatar Modal -->
+<div id="avatar-modal" class="avatar-modal">
+  <div class="avatar-modal-content">
+    <span class="avatar-modal-close">&times;</span>
+    <h2>Διάλεξε εικόνα προφίλ</h2>
+
+    <div class="avatar-grid">
+      <img src="images/avatars/avatar1.png" class="avatar-option">
+      <img src="images/avatars/avatar2.png" class="avatar-option">
+      <img src="images/avatars/avatar3.png" class="avatar-option">
+      <img src="images/avatars/avatar4.png" class="avatar-option">
+      <img src="images/avatars/avatar5.png" class="avatar-option">
+      <img src="images/avatars/avatar6.png" class="avatar-option">
+      <img src="images/avatars/avatar7.png" class="avatar-option">
+      <img src="images/avatars/avatar8.png" class="avatar-option">
+      <img src="images/avatars/avatar9.png" class="avatar-option">
+      <img src="images/avatars/avatar10.png" class="avatar-option">
+    </div>
+
+    <button type="button" id="avatar-reset-btn" class="btn secondary avatar-reset-btn">
+      Προεπιλεγμένο avatar
+    </button>
+
+    <button type="button" id="avatar-upload-btn" class="btn secondary avatar-upload-btn">
+      Ανέβασε δική σου φωτογραφία
+    </button>
+  </div>
+</div>
+
+<script type="module" src="script.js"></script>
+
+</body>
+</html>

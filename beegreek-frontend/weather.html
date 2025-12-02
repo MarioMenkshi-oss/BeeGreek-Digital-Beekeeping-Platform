@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <title>Μελισσοκομικός Καιρός - BeeGreek</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    body {
+      background: #faf7ef;
+      font-family: "Inter", Arial, sans-serif;
+    }
+
+    .weather-page {
+      padding: 40px 0;
+    }
+
+    .weather-card {
+      max-width: 500px;
+      margin: 0 auto;
+      background: #fff6d9;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+      border: 1px solid #eedca9;
+    }
+
+    h1 {
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .weather-subtitle {
+      margin-bottom: 25px;
+      color: #555;
+      font-size: 14px;
+    }
+
+    .weather-search {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .weather-search input {
+      flex: 1;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+    }
+
+    .weather-search button {
+      padding: 12px 18px;
+      background: #000;
+      border-radius: 10px;
+      color: #fff;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .weather-status {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .weather-error {
+      display: none;
+      background: #ffd4d4;
+      color: #8e0000;
+      padding: 10px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .weather-info {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid #f0e6c7;
+      display: none;
+    }
+
+    .weather-info p {
+      margin: 8px 0;
+      font-size: 15px;
+      color: #444;
+    }
+
+    .weather-tip {
+      margin-top: 18px;
+      font-size: 13px;
+      color: #666;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+
+    <div class="logo">
+      <img src="logo.svg" alt="BeeGreek logo" class="logo-img">
+    </div>
+
+    <nav class="main-nav">
+      <a href="index.html">Αρχική</a>
+
+      <a href="profile.html" id="nav-avatar-container" style="display:none;">
+        <img id="nav-avatar" src="images/avatars/default-avatar.png" alt="avatar">
+      </a>
+
+      <a href="chat.html" id="nav-chat" style="display:none;">Chat</a>
+      <a href="weather.html" id="nav-weather" style="display:none;">Καιρός</a>
+
+      <a href="login.html" id="nav-login">Είσοδος</a>
+      <a href="register.html" id="nav-register">Εγγραφή</a>
+      <a href="#" id="nav-logout" style="display:none;">Έξοδος</a>
+    </nav>
+
+  </div>
+</header>
+
+<main class="weather-page">
+  <div class="container">
+
+    <div class="weather-card">
+
+      <h1>Μελισσοκομικός Καιρός 🐝</h1>
+      <p class="weather-subtitle">
+        Γράψε την περιοχή σου για να δεις άμεσα τις καιρικές συνθήκες.
+      </p>
+
+      <div id="weather-loading" class="weather-status" style="display:none;">
+        Φόρτωση δεδομένων...
+      </div>
+
+      <div id="weather-error" class="weather-error"></div>
+
+      <div class="weather-search">
+        <input type="text" id="weather-input" placeholder="π.χ. Athens,GR ή Thessaloniki">
+        <button id="weather-search-btn">Αναζήτηση</button>
+        <button id="weather-gps-btn" style="margin-top:10px; width:100%;">
+  📍 Εντοπισμός Τοποθεσίας
+</button>
+      </div>
+
+      <div id="weather-info" class="weather-info">
+        <p><strong>Περιοχή:</strong> <span id="weather-location"></span></p>
+        <p><strong>Θερμοκρασία:</strong> <span id="weather-temp"></span> °C</p>
+        <p><strong>Αίσθηση:</strong> <span id="weather-feels"></span> °C</p>
+        <p><strong>Καιρός:</strong> <span id="weather-desc"></span></p>
+        <p><strong>Άνεμος:</strong> <span id="weather-wind"></span> m/s</p>
+        <p><strong>Υγρασία:</strong> <span id="weather-hum"></span> %</p>
+      </div>
+
+      <p class="weather-tip">
+        💡 Συμβουλή: Βάλε περιοχή και στο προφίλ μελισσοκόμου για γρήγορη αυτόματη ενημέρωση!
+      </p>
+
+    </div>
+  </div>
+</main>
+
+<script type="module" src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,398 @@
+/* ===========================================================
+   RESET
+=========================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #faf7ef;
+  font-family: "Inter", Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Containers */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===========================================================
+   HEADER / NAVIGATION
+=========================================================== */
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid #eee0b8;
+  padding: 12px 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-img {
+  height: 48px;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #333;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.main-nav a:hover {
+  color: #ffb300;
+}
+
+#nav-avatar-container img {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px solid #ffc64d;
+  object-fit: cover;
+}
+
+
+/* ===========================================================
+   BUTTONS
+=========================================================== */
+.btn {
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: 0.2s ease;
+  font-size: 15px;
+}
+
+.btn.primary {
+  background: #000;
+  color: white;
+}
+
+.btn.primary:hover {
+  background: #333;
+}
+
+.btn.secondary {
+  background: #ffe29a;
+  color: #7a5d00;
+}
+
+.btn.secondary:hover {
+  background: #ffd67a;
+}
+
+.btn.edit-btn {
+  background: #000;
+  color: #fff;
+}
+
+.btn.edit-btn:hover {
+  background: #333;
+}
+
+.full-width {
+  width: 100%;
+}
+
+
+/* ===========================================================
+   HERO SECTION (Αρχική)
+=========================================================== */
+.hero {
+  padding: 60px 0;
+  background: #fff8dd;
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1 {
+  font-size: 34px;
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+
+.hero-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 14px;
+}
+
+.hero-card {
+  flex: 1;
+  background: #fff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+  border: 1px solid #eedca9;
+}
+
+.hero-card h2 {
+  margin-bottom: 12px;
+  font-size: 22px;
+}
+
+.hero-card ul {
+  list-style: none;
+}
+
+.hero-card li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+
+/* ===========================================================
+   AUTH PAGES (Login / Register / Verify)
+=========================================================== */
+.auth-page {
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.auth-card {
+  background: #fff6d9;
+  padding: 30px;
+  max-width: 450px;
+  width: 90%;
+  border-radius: 16px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+  border: 1px solid #eedca9;
+}
+
+.auth-card h1 {
+  font-size: 26px;
+  margin-bottom: 12px;
+}
+
+.auth-subtitle {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.simple-form label {
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #555;
+  font-weight: 600;
+  display: block;
+}
+
+.simple-form input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.simple-form input:focus {
+  border-color: #ffbb33;
+}
+
+.auth-footer {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.auth-link {
+  color: #333;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.auth-error {
+  color: #b40000;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+
+/* ===========================================================
+   PROFILE PAGE
+=========================================================== */
+.profile-page {
+  padding: 40px 0;
+}
+
+.profile-card {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fffdf7;
+  padding: 30px;
+  border-radius: 18px;
+  border: 1px solid #eedca9;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+}
+
+.profile-avatar {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-avatar img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ffc64d;
+}
+
+.profile-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.profile-label {
+  font-weight: 600;
+  color: #555;
+}
+
+.profile-value {
+  font-weight: 600;
+  color: #222;
+}
+
+.profile-divider {
+  margin: 20px 0;
+}
+
+.edit-profile-center {
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+/* ===========================================================
+   AVATAR MODAL
+=========================================================== */
+.avatar-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(4px);
+  background: rgba(0,0,0,0.35);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.avatar-modal-content {
+  background: #fffbea;
+  padding: 25px;
+  border-radius: 14px;
+  width: 90%;
+  max-width: 450px;
+  position: relative;
+  text-align: center;
+}
+
+.avatar-modal-close {
+  position: absolute;
+  right: 15px;
+  top: 12px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.avatar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.avatar-option {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.2s;
+}
+
+.avatar-option:hover {
+  border-color: #ffb300;
+}
+
+
+/* ===========================================================
+   CHAT PAGE
+=========================================================== */
+.chat-message {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ===========================================================
+   WEATHER PAGE
+=========================================================== */
+.weather-card p {
+  font-size: 15px;
+}
+
+
+/* ===========================================================
+   ABOUT SECTION
+=========================================================== */
+.about-section {
+  padding: 50px 0;
+}
+
+.about-section h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.about-text {
+  font-size: 16px;
+  color: #555;
+}
+
+
+/* ===========================================================
+   RESPONSIVE
+=========================================================== */
+@media (max-width: 768px) {
+  .hero-inner {
+    flex-direction: column;
+  }
+}

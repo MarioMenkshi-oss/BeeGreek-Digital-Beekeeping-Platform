@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <title>Είσοδος - BeeGreek</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+
+    <div class="logo">
+      <img src="logo.svg" alt="BeeGreek logo" class="logo-img">
+    </div>
+
+    <nav class="main-nav">
+      <a href="index.html">Αρχική</a>
+
+      <a href="profile.html" id="nav-avatar-container" style="display:none;">
+        <img id="nav-avatar" src="images/avatars/default-avatar.png" alt="avatar">
+      </a>
+
+      <a href="chat.html" id="nav-chat" style="display:none;">Chat</a>
+      <a href="weather.html" id="nav-weather" style="display:none;">Καιρός</a>
+
+      <a href="login.html" id="nav-login">Είσοδος</a>
+      <a href="register.html" id="nav-register">Εγγραφή</a>
+      <a href="#" id="nav-logout" style="display:none;">Έξοδος</a>
+    </nav>
+
+  </div>
+</header>
+
+<main class="auth-page">
+  <div class="auth-card">
+
+    <h1>Είσοδος</h1>
+    <p class="auth-subtitle">
+      Συνδέσου στο BeeGreek για να αποκτήσεις πρόσβαση στα εργαλεία και την κοινότητα.
+    </p>
+
+    <form class="simple-form" id="login-form">
+
+      <label for="login-email">Email</label>
+      <input type="email" id="login-email" placeholder="you@example.com" required>
+
+      <label for="login-password">Κωδικός</label>
+      <input type="password" id="login-password" placeholder="Ο κωδικός σου" required>
+
+      <p id="auth-error" class="auth-error"></p>
+
+      <button type="submit" class="btn primary full-width">Είσοδος</button>
+    </form>
+
+    <p class="auth-footer">
+      Δεν έχεις λογαριασμό;
+      <a href="register.html" class="auth-link">Κάνε εγγραφή</a>
+    </p>
+
+  </div>
+</main>
+
+<script type="module" src="script.js"></script>
+
+</body>
+</html>

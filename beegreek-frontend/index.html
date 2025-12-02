@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <title>BeeGreek - Η Κοινότητα των Μελισσοκόμων</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+
+    <div class="logo">
+      <img src="logo.svg" alt="BeeGreek logo" class="logo-img">
+    </div>
+
+    <nav class="main-nav">
+      <a href="index.html">Αρχική</a>
+
+      <!-- Avatar μετά το login -->
+      <a href="profile.html" id="nav-avatar-container" style="display:none;">
+        <img id="nav-avatar" src="images/avatars/default-avatar.png" alt="avatar">
+      </a>
+
+      <a href="chat.html" id="nav-chat" style="display:none;">Chat</a>
+      <a href="weather.html" id="nav-weather" style="display:none;">Καιρός</a>
+
+      <a href="login.html" id="nav-login">Είσοδος</a>
+      <a href="register.html" id="nav-register">Εγγραφή</a>
+      <a href="#" id="nav-logout" style="display:none;">Έξοδος</a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+  <div class="container hero-inner">
+
+    <div class="hero-text">
+      <h1 id="welcome-title">BeeGreek – Η ψηφιακή κυψέλη της Ελλάδας</h1>
+
+      <p>
+        Εργαλεία, οδηγοί, κοινότητα και γνώσεις — όλα σε ένα μέρος για τον σύγχρονο μελισσοκόμο.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="register.html" class="btn primary">Ξεκίνα τώρα</a>
+        <a href="login.html" class="btn secondary">Ή κάνε είσοδο</a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <h2>Τι θα βρεις στο BeeGreek;</h2>
+      <ul>
+        <li>📘 Οδηγούς για νέους & προχωρημένους</li>
+        <li>🛠️ Χρήσιμα εργαλεία μελισσοκόμου</li>
+        <li>📢 Αγγελίες για εξοπλισμό & μελίσσια</li>
+        <li>🤝 Κοινότητα μελισσοκόμων από όλη την Ελλάδα</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<section class="about-section">
+  <div class="container">
+    <h2>Λίγα λόγια για εμάς</h2>
+    <p class="about-text">
+      Το BeeGreek είναι ένας σύγχρονος ψηφιακός χώρος αφιερωμένος στη μελισσοκομία.
+      Στόχος μας είναι να παρέχουμε γνώσεις, πρακτικές λύσεις και έναν ενιαίο χώρο
+      επικοινωνίας για όλους τους μελισσοκόμους της Ελλάδας.
+    </p>
+  </div>
+</section>
+
+<script type="module" src="script.js"></script>
+
+</body>
+</html>
